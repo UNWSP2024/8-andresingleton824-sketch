@@ -8,9 +8,13 @@
 def initials_generator(personsName):
 
     personsInitials = ""
-    #    Add your logic here
+
+    parts = personsName.split()
+    for part in parts:
+        personsInitials += part[0].upper() + ". "
 
     return personsInitials.strip()
+
 
 # Example usage
 if __name__=="__main__":
