@@ -6,11 +6,11 @@
 # For example the string "StopAndSmellTheRoses" would be converted to "Stop and smell the roses."
 
 # Start your changes on line 13
-
+ 
 def word_separator(sentence):
-
+ 
     new_sentence = ""
-    
+ 
     for char in sentence:
         # When we hit an uppercase letter (and it's not the very first character),
         # it signals the start of a new word — insert a space and lowercase the letter
@@ -18,16 +18,13 @@ def word_separator(sentence):
             new_sentence += " " + char.lower()
         else:
             new_sentence += char
-
-    # Add a period at the ends
-    new_sentence += "."
-
+ 
     return new_sentence.strip()
-
+ 
 # Example usage
 if __name__=="__main__":
     sentence = "StopAndSmellTheRoses"
-
+ 
     new_sentence = word_separator(sentence)
-
+ 
     print(new_sentence)
