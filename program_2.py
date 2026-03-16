@@ -10,7 +10,17 @@
 def word_separator(sentence):
 
     new_sentence = ""
-    #    Add your logic here
+    
+    for char in sentence:
+        # When we hit an uppercase letter (and it's not the very first character),
+        # it signals the start of a new word — insert a space and lowercase the letter
+        if char.isupper() and new_sentence != "":
+            new_sentence += " " + char.lower()
+        else:
+            new_sentence += char
+
+    # Add a period at the ends
+    new_sentence += "."
 
     return new_sentence.strip()
 

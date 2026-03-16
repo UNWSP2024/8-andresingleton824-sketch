@@ -1,0 +1,41 @@
+"""
+PSEUDOCODE: Course Info Program
+
+BEGIN
+    CREATE an empty dictionary called courses
+
+    // Step 1: Collect course data from the user
+    DISPLAY "Enter course ID and name pairs. Type 'done' when finished."
+
+    REPEAT
+        PROMPT user for course_id
+        IF course_id == "done" THEN
+            EXIT loop
+        END IF
+
+        PROMPT user for course_name
+        STORE courses[course_id] = course_name
+    UNTIL user types "done"
+
+    // Step 2: Ask the user for a subject to search
+    PROMPT user for subject (e.g., "COS")
+
+    // Step 3: Display matching courses
+    DISPLAY "Courses with subject " + subject + ":"
+
+    found = FALSE
+
+    FOR EACH course_id, course_name IN courses
+        IF course_id STARTS WITH subject THEN
+            DISPLAY course_id + " - " + course_name
+            found = TRUE
+        END IF
+    END FOR
+
+    IF found == FALSE THEN
+        DISPLAY "No courses found for subject " + subject
+    END IF
+
+END
+"""
+
